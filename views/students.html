@@ -1,0 +1,131 @@
+ Wrapper-->
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <div ng-include="'views/common/navigation.html'"></div>
+
+    <!-- Page wraper -->
+    <!-- ng-class with current state name give you the ability to extended customization your view -->
+    <div id="page-wrapper" class="gray-bg {{$state.current.name}}">
+
+        <!-- Page wrapper -->
+        <div ng-include="'views/common/topnavbar.html'"></div>
+
+        <div class="wrapper wrapper-content animated fadeInRight" ng-controller="studentsCtrl"> 
+             <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                            <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="8">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</td>
+                                        <th>SurName</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                       <!--  <th>Address</th>
+                                        <th>Birthdate</th> -->
+                                        <th>Class</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   <tr ng-repeat="student in students">
+                                       <td>{{student.sid}}</td>
+                                       <td>{{student.sname}}</td>
+                                       <td>{{student.surname}}</td>
+                                       <td>{{student.email}}</td>
+                                       <td>{{student.phone}}</td>
+                                       <!-- <td>{{student.address}}</td>
+                                       <td>{{student.birthdate}}</td> -->
+                                       <td>{{student.cname}}</td>
+                                       <td><a class="btn btn-info " type="button"  ng-click="editStudent(student)"><i class="fa fa-paste"></i></a>&nbsp;<a class="btn btn-danger" ng-click="deleteStudent(student)"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="row">
+                <form name="studentForm">
+                    <div class="col-md-2"><label>Name: </label></div>
+                    <div class="col-md-3">
+                         <input type="text" ng-model = "newStudent.sname" class="form-control" required>
+                    </div>
+                    <div class="col-md-7">&nbsp;</div>
+                    <div class="col-md-12">&nbsp;</div>
+                    <div class="col-md-2"><label>SurName: </label></div>
+                    <div class="col-md-3">
+                         <input type="text" ng-model = "newStudent.surname" class="form-control" required>
+                    </div>
+                    <div class="col-md-7">&nbsp;</div>
+                    <div class="col-md-12">&nbsp;</div>
+
+                    <div class="col-md-2"><label>Email: </label></div>
+                    <div class="col-md-3">
+                         <input type="email" ng-model = "newStudent.email" class="form-control" required>
+                    </div>
+                    <div class="col-md-7">&nbsp;</div>
+                    <div class="col-md-12">&nbsp;</div>
+
+                    <div class="col-md-2"><label>Phone: </label></div>
+                    <div class="col-md-3">
+                         <input type="text" ng-model = "newStudent.phone" class="form-control" required>
+                    </div>
+                    <div class="col-md-7">&nbsp;</div>
+                    <div class="col-md-12">&nbsp;</div>
+
+                    <!-- <div class="col-md-2"><label>Address: </label></div>
+                    <div class="col-md-3">
+                         <input type="text" ng-model = "newStudent.address" class="form-control">
+                    </div>
+                    <div class="col-md-7">&nbsp;</div>
+                    <div class="col-md-12">&nbsp;</div> -->
+
+                   <!--  <div class="col-md-2"><label>Birthdate: </label></div>
+                    <div class="col-md-3">
+                        <div class="form-group" id="data_1">
+                            <div class="input-group date">
+                                <input type="datetime" class="form-control" date-time ng-model="sampleDate" view="date" auto-close="true" min-view="date" format="YYYY-MM-DD">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">&nbsp;</div> -->
+                    <div class="col-md-12">&nbsp;</div>
+
+                    <div class="col-md-2"><label>Class: </label></div>
+                    <div class="col-md-3">
+                    <select name="repeatSelect" id="repeatSelect" class="form-control" ng-model="newStudent.cid" required >
+                      <option ng-repeat="class in classes" ng-value="{{class.id}}"  ng-selected="newStudent.cid == class.id">{{class.name}}</option>
+                    </select>
+
+                             <!-- <input type="text" ng-model = "newStudent.cname" class="form-control" required> -->
+                    </div>
+                    <div class="col-md-7">&nbsp;</div>
+                    <div class="col-md-12">&nbsp;</div>
+                    <div class="col-md-2">&nbsp;</div>
+                    <div class="col-md-3">
+                        <button ng-click="save()" class="btn btn-sm btn-primary">{{buttonName}}</button>
+                    </div>
+                    <div class="col-md-7">&nbsp;</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+   
+    
+    <!-- Footer -->
+    <div ng-include="'views/common/footer.html'"></div>
+
+</div>
+<!-- End page wrapper-->
+</div>
+<!-- End wrapper

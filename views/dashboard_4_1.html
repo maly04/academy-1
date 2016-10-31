@@ -1,0 +1,300 @@
+<div class="wrapper wrapper-content">
+<div class="animated fadeInRight">
+<div class="row">
+    <div class="col-lg-4">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <span class="label label-success pull-right">Total</span>
+                <h5>Score</h5>
+            </div>
+            <div class="ibox-content">
+                <h1 class="no-margins">4500</h1>
+                <div class="stat-percent font-bold text-success">15% <i class="fa fa-level-up"></i></div>
+                <small>pts</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <span class="label label-info pull-right">Current course</span>
+                <h5>Score</h5>
+            </div>
+            <div class="ibox-content">
+                <h1 class="no-margins">200</h1>
+                <div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i></div>
+                <small>pts</small>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-4">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Activité sur le site</h5>
+                <div class="ibox-tools">
+                    <span class="label label-primary">Updated 28-09-2016</span>
+                </div>
+            </div>
+            <div class="ibox-content no-padding" ng-controller="widgetFlotChart as chart">
+                <div class="flot-chart m-t-lg" style="height: 55px;">
+                    <div flot class="flot-chart-content" dataset="chart.flotChartData1" options="chart.flotChartOptions1"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-8">
+        <div class="ibox float-e-margins">
+            <div class="ibox-content">
+                <div>
+                    <h3 class="font-bold no-margins">
+                        Evolution des notes
+                    </h3>
+                    <small>Mathématiques</small>
+                </div>
+
+                <div class="m-t-sm">
+
+                    <div class="row">
+                        <div class="col-md-8" ng-controller="chartJsCtrl as chart">
+                            <div>
+                                <canvas linechart options="chart.lineOptions" data="chart.lineDataDashboard4" height="114" responsive="true"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="stat-list">
+                                 <li>
+                                    <h2 class="no-margins">9.5</h2>
+                                    <small>Moyenne sur le trimestre (Academy)</small>
+                                    <div class="progress progress-mini">
+                                        <div class="progress-bar progress-bar-warning" style="width: 47.5%;"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h2 class="no-margins">15.5</h2>
+                                    <small>Moyenne sur le trimestre (Scolaire)</small>
+                                    <div class="progress progress-mini">
+                                        <div class="progress-bar progress-bar-info" style="width: 77.5%;"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h2 class="no-margins "><strong>11.3</strong></h2>
+                                    <small><strong>Moyenne sur l'année (Scolaire)</strong></small>
+                                    <div class="progress progress-mini">
+                                        <div class="progress-bar progress-bar-success" style="width: 56.5%;"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="m-t-md">
+                    <small class="pull-right">
+                        <i class="fa fa-clock-o"> </i>
+                        Mise à jour le 30.09.2016
+                    </small>
+                    <small>
+                        <strong>Note maximale : </strong>16/20 pour le chapitre Nombres Complexes
+                    </small>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <span class="label label-success pull-right">Sur un total de 3 élèves</span>
+                <h5>Classement</h5>
+            </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Score</th>
+                    <th>Moy Academy</th>
+                    <th>Moy Scolaire</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Léo</td>
+                        <td>S</td>
+                        <td>1500</td>
+                        <td>12</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Cédric</td>
+                        <td>T</td>
+                        <td>1200</td>
+                        <td>11</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Léo</td>
+                        <td>B</td>
+                        <td>1500</td>
+                        <td>10</td>
+                        <td>14</td>
+                    </tr>
+                </tbody>
+            </table>    
+
+
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+<div class="col-lg-12">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Mes devoirs</h5>
+            <div ibox-tools></div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-9 m-b-xs">
+                    <div data-toggle="buttons" class="btn-group">
+                        <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> Semaine </label>
+                        <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> Mois </label>
+                        <label class="btn btn-sm btn-white"> <input type="radio" id="option3" name="options"> Année </label>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="input-group"><input type="text" placeholder="Rechercher" class="input-sm form-control"> <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary"> Rechercher</button> </span></div>
+                </div>
+            </div>
+            <div class="table-responsive" ng-controller="exerciseCtrl">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Chapitre </th>
+                            <th>Sujet </th>
+                            <th>Note</th>
+                            <th>Date</th>
+                            <th>Statut</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="exercise in exercises" ng-click="detail(exercise)">
+                            <td>{{exercise.id}}</td>
+                            <td><a ng-href='#/exercise/{{exercise.id}}'>{{exercise.cname}}</a></td>
+                            <td><a ng-href='#/exercise/{{exercise.id}}'>{{exercise.sname}}</a></td>
+                            <td><a ng-href='#/exercise/{{exercise.id}}'>{{exercise.content}}</a></td>
+                            <td>{{exercise.dstart}}</td>
+                            <td><span class="label label-danger">{{exercise.status}}</span></td>
+                        </tr>                    
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="small-chat-box ng-small-chat fadeInRight animated" ng-show="openChat">
+
+    <div class="heading" draggable="true">
+        <small class="chat-date pull-right">
+            02.19.2015
+        </small>
+        Small chat
+    </div>
+
+    <div class="content" chat-slim-scroll>
+
+        <div class="left">
+            <div class="author-name">
+                Monica Jackson <small class="chat-date">
+                10:02 am
+            </small>
+            </div>
+            <div class="chat-message active">
+                Lorem Ipsum is simply dummy text input.
+            </div>
+
+        </div>
+        <div class="right">
+            <div class="author-name">
+                Mick Smith
+                <small class="chat-date">
+                    11:24 am
+                </small>
+            </div>
+            <div class="chat-message">
+                Lorem Ipsum is simpl.
+            </div>
+        </div>
+        <div class="left">
+            <div class="author-name">
+                Alice Novak
+                <small class="chat-date">
+                    08:45 pm
+                </small>
+            </div>
+            <div class="chat-message active">
+                Check this stock char.
+            </div>
+        </div>
+        <div class="right">
+            <div class="author-name">
+                Anna Lamson
+                <small class="chat-date">
+                    11:24 am
+                </small>
+            </div>
+            <div class="chat-message">
+                The standard chunk of Lorem Ipsum
+            </div>
+        </div>
+        <div class="left">
+            <div class="author-name">
+                Mick Lane
+                <small class="chat-date">
+                    08:45 pm
+                </small>
+            </div>
+            <div class="chat-message active">
+                I belive that. Lorem Ipsum is simply dummy text.
+            </div>
+        </div>
+
+
+    </div>
+    <div class="form-chat">
+        <div class="input-group input-group-sm"><input type="text" class="form-control"> <span class="input-group-btn"> <button
+                class="btn btn-primary" type="button">Send
+        </button> </span></div>
+    </div>
+
+</div>
+<div id="small-chat" ng-click="openChat = !openChat">
+
+    <span class="badge badge-warning pull-right">5</span>
+    <a class="open-small-chat">
+        <i class="fa fa-comments"></i>
+
+    </a>
+</div>

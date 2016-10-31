@@ -1,0 +1,7 @@
+
+/api/vendor
+/api/node_modules
+/api/config/database.php
+/api/Homestead.yaml
+/api/Homestead.json
+/api/.env
